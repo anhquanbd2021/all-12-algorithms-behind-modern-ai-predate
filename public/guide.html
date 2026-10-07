@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Column-by-column guide to the Predate Lab — the 12 algorithms behind modern AI, the missing row, and the failure mode.">
+  <title>Guide — Predate Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@100..900&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+<!-- pb-shell --><link rel="stylesheet" href="./pb-shell.css"><!-- pb-shell --><!-- pb-back --><link rel="stylesheet" href="./pb-back.css"><!-- pb-back --></head>
+<body>
+<main class="guide">
+  <nav aria-label="Primary"><a href="/">Lab</a><a aria-current="page" href="/guide.html">Guide</a><a href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate">Source</a></nav>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Guide · column by column</p>
+      <h1>Why old math suddenly works.</h1>
+      <p class="lede">The viral chart is mostly right. It hides a more useful rule: every headline-grabbing model in the modern stack was built from math that already existed. This guide walks the two columns, the missing row, and the failure mode the lab reproduces.</p>
+    </div>
+  </header>
+
+  <section class="panel">
+    <div class="section-heading"><div><p class="eyebrow">Traditional AI</p><h2>The six still running production</h2></div></div>
+    <p><strong>Linear regression</strong> (1805) fits a straight line through data to predict a number. <strong>Logistic regression</strong> (1958) wraps that idea in a sigmoid to predict a probability. <strong>K-nearest neighbours</strong> (1951) classifies by majority vote of the closest labeled neighbors. <strong>Decision trees</strong> (1984) learn a flowchart of feature thresholds. <strong>Naive Bayes</strong> (1961) scores text or categories fast with a conditional-independence assumption. <strong>K-means</strong> (1967) groups rows by iteratively moving cluster centers.</p>
+    <p>These six still run most business inference — fraud, credit, ranking, churn — anywhere you need a number <em>and</em> a reason. A regulator can ask "why was this declined?" and a shallow decision tree can show the exact threshold.</p>
+  </section>
+
+  <section class="panel">
+    <div class="section-heading"><div><p class="eyebrow">Modern AI</p><h2>The six everyone posts about</h2></div></div>
+    <p><strong>Backpropagation</strong> (1986) computes gradients through a network — it is the engine that trains every model in this column, not a modern technique. <strong>Transformer</strong> (2017) replaced recurrence with parallel attention over positions. <strong>Self-attention</strong> (2017) is the part <em>inside</em> the transformer that decides which tokens matter — not a sibling, the engine. <strong>CNN</strong> (1989) learns local visual patterns through convolution and pooling. <strong>Post-training / SFT + RLHF</strong> (2022) teaches a pretrained model tone, safety, and tool format. <strong>RAG</strong> (2020) gives the model an external memory so it can cite evidence instead of hallucinate.</p>
+    <p>The failure mode here is confusing "new wrapper" with "new math." Modern is not default — it is default <em>for messy inputs</em>: language, vision, long context.</p>
+  </section>
+
+  <section class="panel">
+    <div class="section-heading"><div><p class="eyebrow">The missing row</p><h2>Gradient boosting</h2></div></div>
+    <p><strong>Gradient boosting</strong> builds many shallow trees, each correcting the previous one's errors. <strong>XGBoost</strong> (1999) added regularization, sparse handling, and parallel tree construction. It is still the model to beat on tabular data — which is most business data — and it is missing from both columns of the viral chart.</p>
+  </section>
+
+  <section class="panel">
+    <div class="section-heading"><div><p class="eyebrow">The failure mode</p><h2>Skipping the old column</h2></div></div>
+    <p>Teams study the transformer, skip logistic regression, then ship a fraud model they cannot explain to a regulator. The old column is not legacy — it is most of the inference running right now. In the lab, enable <strong>modern only</strong> on structured tabular fraud data: every modern algorithm returns an empty valid path, and the traditional six — plus the missing row — are the only ones that return a number and a reason.</p>
+  </section>
+
+  <p class="closing-links"><a href="/">Back to the lab</a><span class="sep" aria-hidden="true">·</span><a href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate">Inspect source and tests</a></p>
+</main>
+<!-- pb-shell --><a class="pb-shell" href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate" title="all-12-algorithms-behind-modern-ai-predate — an Article Playbook demo (view source)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="9" height="9" rx="2" fill="#2dd4bf"/><rect x="13" y="2" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="2" y="13" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="13" y="13" width="9" height="9" rx="4.5" fill="#2dd4bf"/></svg><b>all-12-algorithms-behind-modern-ai-predate</b><i>DEMO</i></a><!-- pb-shell --><!-- pb-back --><a class="pb-back" id="pb-back" href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate" title="Back to the article — all-12-algorithms-behind-modern-ai-predate">← Article <i>PLAYBOOK</i></a><script>(function(){var a=document.getElementById('pb-back');if(!a)return;var h=location.hostname;if(/^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[01])\.)/.test(h)){a.href='//'+h+':'+(/^(localhost|127\.0\.0\.1)$/.test(h)?'1234':'30082')+'/microsites/article.html?slug=all-12-algorithms-behind-modern-ai-predate';}})();</script><!-- pb-back --></body>
+</html>

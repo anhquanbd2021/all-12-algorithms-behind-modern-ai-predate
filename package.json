@@ -1,0 +1,15 @@
+{
+  "name": "all-12-algorithms-behind-modern-ai-predate-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Predate Lab — a zero-dependency interactive proving that the 12 algorithms behind modern AI predate ChatGPT, and that skipping the old column breaks explainable fraud scoring.",
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "node --test \"test/*.test.mjs\"",
+    "check": "npm test"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

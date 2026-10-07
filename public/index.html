@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Predate Lab — a zero-dependency interactive proving the 12 algorithms behind modern AI predate ChatGPT, and that skipping the old column breaks explainable fraud scoring.">
+  <title>Predate Lab — All 12 Algorithms Behind Modern Ai Predate Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@100..900&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+<!-- pb-shell --><link rel="stylesheet" href="./pb-shell.css"><!-- pb-shell --><!-- pb-back --><link rel="stylesheet" href="./pb-back.css"><!-- pb-back --></head>
+<body>
+<main>
+  <nav aria-label="Primary"><a aria-current="page" href="/">Lab</a><a href="/guide.html">Guide</a><a href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate">Source</a></nav>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Predate Lab · 12 algorithms, one old toolbox</p>
+      <h1>The math is not new.<br>The scale is.</h1>
+      <p class="lede">Pick structured tabular fraud data, enable <em>modern only</em>, and watch the model find no valid path: no calibrated probability, no reason code a regulator can read. Switch it off and the old column reappears with a number <em>and</em> a reason.</p>
+    </div>
+    <p class="warning"><strong>Safe educational demo.</strong> Every score is simulated deterministically in your browser — no real model trains, no real data is scored.</p>
+  </header>
+
+  <section class="panel controls" aria-labelledby="run-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">Run configuration</p><h2 id="run-title">Lab under test</h2></div>
+      <button id="run-all" type="button">Run the lab</button>
+    </div>
+    <div class="toggle-row">
+      <fieldset>
+        <legend>Data shape</legend>
+        <label><input type="radio" name="dataShape" value="tabular" checked> <span>structured tabular fraud</span></label>
+        <label><input type="radio" name="dataShape" value="language"> <span>unstructured language</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Filter</legend>
+        <label><input type="checkbox" id="modern-only"> <span>modern only — hide the traditional six</span></label>
+      </fieldset>
+    </div>
+    <div class="toggle-row">
+      <label class="slider">Rows (scale) <input type="range" id="rows" min="1000" max="120000" step="1000" value="10000"> <output id="rows-out">10000</output></label>
+      <label class="slider">Feature trust <input type="range" id="trust" min="0" max="100" value="35"> <output id="trust-out">0.35</output></label>
+    </div>
+    <p class="muted">Low feature trust exposes the failure mode the article warns about: a modern architecture that still produces a high-confidence answer with nothing behind it.</p>
+  </section>
+
+  <section class="workspace" aria-label="Algorithm board">
+    <section class="panel" aria-labelledby="rows-title">
+      <div class="section-heading"><div><p class="eyebrow">Algorithms</p><h2 id="rows-title">The board</h2></div><span id="headline" class="badge" role="status" aria-live="polite">—</span></div>
+      <ol id="algorithm-list" class="algorithms" aria-label="Algorithm cards"></ol>
+      <p class="muted">Valid path = a score plus a reason. Dim = no valid path on this data shape. Filtered = hidden by the modern-only toggle.</p>
+    </section>
+  </section>
+
+  <p class="closing-links"><a href="/guide.html">Read the column-by-column guide</a><span class="sep" aria-hidden="true">·</span><a href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate">Inspect source and tests</a></p>
+</main>
+<script type="module" src="/app.js"></script>
+<!-- pb-shell --><a class="pb-shell" href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate" title="all-12-algorithms-behind-modern-ai-predate — an Article Playbook demo (view source)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="9" height="9" rx="2" fill="#2dd4bf"/><rect x="13" y="2" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="2" y="13" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="13" y="13" width="9" height="9" rx="4.5" fill="#2dd4bf"/></svg><b>all-12-algorithms-behind-modern-ai-predate</b><i>DEMO</i></a><!-- pb-shell --><!-- pb-back --><a class="pb-back" id="pb-back" href="https://github.com/anhquanbd2021/all-12-algorithms-behind-modern-ai-predate" title="Back to the article — all-12-algorithms-behind-modern-ai-predate">← Article <i>PLAYBOOK</i></a><script>(function(){var a=document.getElementById('pb-back');if(!a)return;var h=location.hostname;if(/^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[01])\.)/.test(h)){a.href='//'+h+':'+(/^(localhost|127\.0\.0\.1)$/.test(h)?'1234':'30082')+'/microsites/article.html?slug=all-12-algorithms-behind-modern-ai-predate';}})();</script><!-- pb-back --></body>
+</html>
+
